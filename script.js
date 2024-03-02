@@ -5,7 +5,7 @@ function mincost(arr)
 	let pq = [];
    
         // Adding items to the pQueue
-        for (let i = 0; i < n; i++) {
+        for (let i = 0; i < arr.lenght; i++) {
             pq.push(arr[i]);
         }    
            
