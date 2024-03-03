@@ -5,11 +5,11 @@ function mincost(arr)
 	let pq = [];
    
         // Adding items to the pQueue
-        for (let i = 0; i < arr.lenght; i++) {
+        for (let i = 0; i < arr.length; i++) {
             pq.push(arr[i]);
         }    
            
-        pq.sort(function(a,b){return a-b;});
+        pq.sort();
          
         // Initialize result
         let res = 0;
@@ -25,12 +25,14 @@ function mincost(arr)
             // and insert the new rope to pq
             res += first + second;
             pq.push(first + second);
-            pq.sort(function(a,b){return a-b;});
+            pq.sort();
         }
    
         return res;
 	
   
 }
+let arr1 = [1, 2, 3, 4, 5]
+// alert(mincost(arr1))
 
 module.exports=mincost;
