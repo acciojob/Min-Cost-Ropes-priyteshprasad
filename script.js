@@ -9,14 +9,11 @@ function mincost(arr)
             pq.push(arr[i]);
         }    
            
-        pq.sort();
-         
-        // Initialize result
+        // pq.sort();
         let res = 0;
    
-        // While size of priority queue
-        // is more than 1
         while (pq.length > 1) {
+			pq.sort((a, b)=>a-b);
             // Extract shortest two ropes from pq
             let first = pq.shift();
             let second = pq.shift();
@@ -25,14 +22,14 @@ function mincost(arr)
             // and insert the new rope to pq
             res += first + second;
             pq.push(first + second);
-            pq.sort();
+            
         }
    
         return res;
 	
   
 }
-let arr1 = [1, 2, 3, 4, 5]
-// alert(mincost(arr1))
+let arr1 = [1, 2, 3, 4]
+alert(mincost(arr1))
 
 module.exports=mincost;
