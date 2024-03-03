@@ -30,6 +30,6 @@ function mincost(arr)
   
 }
 let arr1 = [1, 2, 3, 4]
-alert(mincost(arr1))
+// alert(mincost(arr1))
 
 module.exports=mincost;
